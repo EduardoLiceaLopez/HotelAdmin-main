@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Habitación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="crearHabitacion()">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <h2>Número de cuarto:</h2>
+          <ion-input type="number" name="id" [(ngModel)]="id" required></ion-input>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h2>Precio:</h2>
+          <ion-input type="number" name="precio" [(ngModel)]="precio" required></ion-input>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h2>Ubicación:</h2>
+          <ion-input type="text" name="ubicacion" [(ngModel)]="ubicacion" required></ion-input>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h2>Estado:</h2>
+          <ion-input type="text" name="estado" [(ngModel)]="estado" required></ion-input>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <label for="tipo_habitacion">Tipo de Habitación:</label>
+        <select id="tipo_habitacion" name="tipo_habitacion_id" [(ngModel)]="tipo_habitacion_id" required>
+          <option value="">Seleccionar tipo de habitación</option>
+          <option value="1">Individual</option>
+          <option value="2">Doble</option>
+          <option value="3">Suite</option>
+        </select>      
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h2>Capacidad:</h2>
+          <ion-input type="number" name="capacidad" [(ngModel)]="capacidad" required></ion-input>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  
+    <button type="submit">Crear habitación</button>
+  </form>
+</ion-content>

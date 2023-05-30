@@ -1,0 +1,39 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Precio</ion-label>
+          <ion-input type="number" [(ngModel)]="habitacion.precio"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Ubicación</ion-label>
+          <ion-input type="text" [(ngModel)]="habitacion.ubicacion"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Estado</ion-label>
+          <ion-select [(ngModel)]="habitacion.estado">
+            <ion-select-option value="Disponible">Disponible</ion-select-option>
+            <ion-select-option value="No disponible">No disponible</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="actualizarHabitacion()">Actualizar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
